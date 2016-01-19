@@ -83,10 +83,12 @@ sfIpAddress sfIpAddress_fromInteger(sfUint32 address)
 
 
 ////////////////////////////////////////////////////////////
-void sfIpAddress_toString(sfIpAddress address, char* string)
+const char* sfIpAddress_toString(sfIpAddress address)
 {
-    if (string)
-        strcpy(string, address.address);
+    static std::string string;
+
+    string = toSFMLAddress(address).toString();
+    return string.c_str();
 }
 
 

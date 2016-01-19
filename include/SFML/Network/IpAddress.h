@@ -115,10 +115,10 @@ CSFML_NETWORK_API sfIpAddress sfIpAddress_fromInteger(sfUint32 address);
 ///
 /// \param address Address object
 ///
-/// \return String representation of the address
+/// \return String as a locale-dependant ANSI string
 ///
 ////////////////////////////////////////////////////////////
-CSFML_NETWORK_API void sfIpAddress_toString(sfIpAddress address, char* string);
+CSFML_NETWORK_API const char* sfIpAddress_toString(sfIpAddress address);
 
 ////////////////////////////////////////////////////////////
 /// \brief Get an integer representation of the address
